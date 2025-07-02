@@ -1,31 +1,18 @@
+/* Medications Page */
 .medications-page {
-  padding: 60px 0;
-  min-height: calc(100vh - 200px);
-}
-
-.page-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.page-header h1 {
-  font-size: 48px;
-  color: #1f2937;
-  margin-bottom: 16px;
-}
-
-.page-header p {
-  font-size: 20px;
-  color: #6b7280;
+  padding: var(--spacing-2xl) 0;
+  min-height: 100vh;
+  background: var(--background);
 }
 
 /* Medications Table */
 .medications-table {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: var(--background);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  margin-bottom: 60px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-3xl);
+  border: 1px solid var(--border-light);
 }
 
 .medications-table table {
@@ -34,111 +21,162 @@
 }
 
 .medications-table th {
-  background: #f3f4f6;
-  padding: 20px;
+  background: var(--background-secondary);
+  padding: var(--spacing-md) var(--spacing-lg);
   text-align: left;
   font-weight: 600;
-  color: #374151;
-  border-bottom: 2px solid #e5e7eb;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .medications-table td {
-  padding: 20px;
-  border-bottom: 1px solid #e5e7eb;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--border-light);
   vertical-align: middle;
 }
 
-.medications-table tr:last-child td {
+.medications-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.medications-table tbody tr:hover {
+  background-color: var(--background-secondary);
+}
+
+.medications-table tbody tr.highlighted {
+  background-color: rgba(0, 102, 255, 0.05);
+}
+
+.medications-table tbody tr:last-child td {
   border-bottom: none;
 }
 
-.medications-table tr.highlighted {
-  background: #fef3c7;
-}
-
+/* Class Cell */
 .class-cell {
-  background: #f9fafb;
   font-weight: 600;
-  color: #1f2937;
-  border-right: 2px solid #e5e7eb;
+  color: var(--text-primary);
+  background-color: var(--background-secondary);
+  border-right: 1px solid var(--border-light);
 }
 
 .class-name {
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-  text-align: center;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
 }
 
+/* Generic Name */
 .generic-name {
-  font-weight: 600;
-  color: #1f2937;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
+/* Brand Names */
 .brand-names {
-  color: #6b7280;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
 }
 
+/* Details Link */
 .details-link {
-  color: #2563eb;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--secondary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
 }
 
 .details-link:hover {
-  color: #1e40af;
+  background: var(--secondary-hover);
+  transform: translateX(2px);
+  color: white;
 }
 
 /* Medications Info */
 .medications-info {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .medications-info h2 {
-  font-size: 32px;
-  color: #1f2937;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-md);
 }
 
-.medications-info p {
-  font-size: 18px;
-  color: #4b5563;
+.medications-info > p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
   line-height: 1.6;
-  margin-bottom: 24px;
 }
 
-.medications-info ul {
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  text-align: left;
   list-style: none;
-  padding: 0;
-  margin-bottom: 32px;
 }
 
-.medications-info li {
-  padding-left: 28px;
+.features-list li {
   position: relative;
-  margin-bottom: 12px;
-  color: #4b5563;
-  font-size: 16px;
+  padding-left: var(--spacing-lg);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
-.medications-info li::before {
-  content: '✓';
+.features-list li::before {
+  content: '';
   position: absolute;
   left: 0;
-  color: #059669;
-  font-weight: 700;
-  font-size: 18px;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  background: var(--secondary);
+  border-radius: var(--radius-full);
 }
 
+/* Prescription Notice */
 .prescription-notice {
-  background: #fef3c7;
-  border: 1px solid #fbbf24;
-  border-radius: 8px;
-  padding: 16px 20px;
-  color: #92400e;
-  font-size: 16px;
+  background: var(--background-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.prescription-notice strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .medications-table {
+    overflow-x: auto;
+    margin: 0 calc(-1 * var(--spacing-md));
+  }
+  
+  .medications-table table {
+    min-width: 600px;
+  }
+  
+  .medications-table th,
+  .medications-table td {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .features-list {
+    grid-template-columns: 1fr;
+  }
 } 

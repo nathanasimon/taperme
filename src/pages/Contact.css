@@ -1,63 +1,65 @@
+/* Contact Page */
 .contact-page {
-  padding: 60px 0;
+  padding: var(--spacing-2xl) 0;
+  background: var(--background);
 }
 
 /* Contact Content */
 .contact-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  margin-bottom: 60px;
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
 }
 
 /* Contact Form Section */
 .contact-form-section {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: var(--background);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
 }
 
 .contact-form-section h2 {
-  font-size: 32px;
-  color: #1f2937;
-  margin-bottom: 30px;
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--spacing-lg);
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-xs);
 }
 
 .form-group label {
-  font-weight: 600;
-  color: #374151;
-  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.95rem;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 12px 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  font-size: 16px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
   font-family: inherit;
-  transition: border-color 0.2s;
+  transition: border-color var(--transition-fast);
+  background: var(--background);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: var(--secondary);
 }
 
 .form-group textarea {
@@ -66,141 +68,164 @@
 }
 
 .submit-button {
-  background: #2563eb;
+  background: var(--primary);
   color: white;
   border: none;
-  padding: 14px 32px;
-  border-radius: 6px;
-  font-size: 18px;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all var(--transition-base);
   align-self: flex-start;
 }
 
 .submit-button:hover {
-  background: #1e40af;
+  background: var(--primary-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 /* Contact Info Section */
 .contact-info-section {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: var(--spacing-lg);
 }
 
 .contact-info-section h2 {
-  font-size: 28px;
-  color: #1f2937;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .contact-method {
-  background: white;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: var(--background);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.contact-method:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .contact-method h3 {
-  font-size: 20px;
-  color: #1f2937;
-  margin-bottom: 12px;
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .contact-method p {
-  color: #4b5563;
-  margin-bottom: 8px;
-  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.95rem;
 }
 
 .contact-method a {
-  color: #2563eb;
+  color: var(--secondary);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color var(--transition-fast);
 }
 
 .contact-method a:hover {
-  color: #1e40af;
+  color: var(--secondary-hover);
 }
 
 /* Urgent Section */
 .urgent-section {
-  background: #fef3c7;
-  padding: 40px;
-  border-radius: 12px;
-  margin-bottom: 40px;
+  background: var(--background-secondary);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-2xl);
+  border: 1px solid var(--border);
 }
 
 .urgent-section h2 {
-  font-size: 32px;
-  color: #92400e;
-  margin-bottom: 30px;
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
   text-align: center;
 }
 
 .urgent-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
 }
 
 .urgent-card {
-  background: white;
-  padding: 24px;
-  border-radius: 8px;
+  background: var(--background);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
   text-align: center;
-  border: 1px solid #fbbf24;
+  border: 1px solid var(--border-light);
 }
 
 .urgent-card h3 {
-  font-size: 20px;
-  color: #92400e;
-  margin-bottom: 12px;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
 }
 
 .urgent-card p {
-  color: #78350f;
-  font-size: 14px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
 /* Response Time */
 .response-time {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: var(--background);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
 }
 
 .response-time h2 {
-  font-size: 32px;
-  color: #1f2937;
-  margin-bottom: 30px;
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-lg);
   text-align: center;
 }
 
 .response-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
 }
 
 .response-card {
   text-align: center;
-  padding: 24px;
-  background: #f9fafb;
-  border-radius: 8px;
+  padding: var(--spacing-lg);
+  background: var(--background-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.response-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .response-card h3 {
-  font-size: 18px;
-  color: #1f2937;
-  margin-bottom: 8px;
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xs);
 }
 
 .response-card p {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #2563eb;
+  color: var(--secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .urgent-grid,
+  .response-grid {
+    grid-template-columns: 1fr;
+  }
 } 

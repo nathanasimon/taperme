@@ -33,6 +33,16 @@ function Layout({ children }: LayoutProps) {
         </div>
       </header>
 
+      {/* Floating Provider CTA - Only on providers page */}
+      {location.pathname === '/providers' && (
+        <Link to="/providers" className="floating-provider-cta">
+          <span>Become a TaperMe Provider</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </Link>
+      )}
+
       <main className="main">
         {children}
       </main>

@@ -49,7 +49,7 @@ function Medications() {
                     <td className="brand-names">{med.brandNames.join(', ')}</td>
                     <td className="details-cell">
                       <Link to={`/medications/${med.slug}`} className="details-link">
-                        View Details →
+                        View Details
                       </Link>
                     </td>
                   </tr>
@@ -65,7 +65,7 @@ function Medications() {
             Every medication in our catalog is carefully compounded into liquid form by our 
             partner pharmacies. Each prescription includes:
           </p>
-          <ul>
+          <ul className="features-list">
             <li>Custom concentration based on your taper plan</li>
             <li>Pre-measured oral syringe for accurate dosing</li>
             <li>Clear labeling with dosing instructions</li>

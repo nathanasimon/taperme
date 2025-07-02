@@ -1,48 +1,32 @@
+/* Pricing Page */
 .pricing-page {
-  padding: 60px 0;
-}
-
-.page-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.page-header h1 {
-  font-size: 48px;
-  color: #1f2937;
-  margin-bottom: 16px;
-}
-
-.page-header p {
-  font-size: 20px;
-  color: #6b7280;
+  padding: var(--spacing-2xl) 0;
+  background: var(--background);
 }
 
 /* Pricing Overview */
 .pricing-overview {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing-3xl);
 }
 
 .pricing-overview h2 {
-  font-size: 32px;
-  color: #1f2937;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-md);
 }
 
 .pricing-overview > p {
-  font-size: 18px;
-  color: #4b5563;
-  margin-bottom: 30px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.125rem;
 }
 
+/* Pricing Table */
 .pricing-table {
+  background: var(--background);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--border-light);
 }
 
 .pricing-table table {
@@ -51,281 +35,321 @@
 }
 
 .pricing-table th {
-  background: #f3f4f6;
-  padding: 16px;
+  background: var(--background-secondary);
+  padding: var(--spacing-md) var(--spacing-lg);
   text-align: left;
   font-weight: 600;
-  color: #374151;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .pricing-table td {
-  padding: 16px;
-  border-bottom: 1px solid #e5e7eb;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--border-light);
 }
 
-.pricing-table tr:last-child td {
+.pricing-table tbody tr:last-child td {
   border-bottom: none;
 }
 
+.pricing-table tbody tr:hover {
+  background-color: var(--background-secondary);
+}
+
 .pricing-note {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
   font-style: italic;
-  color: #6b7280;
-  font-size: 14px;
 }
 
 /* Insurance Section */
 .insurance-section {
-  margin-bottom: 40px;
+  background: var(--background-secondary);
+  padding: var(--spacing-3xl) 0;
+  margin: 0 calc(-1 * var(--spacing-lg));
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
 }
 
 .insurance-section h2 {
-  font-size: 32px;
-  color: #1f2937;
-  margin-bottom: 30px;
   text-align: center;
+  margin-bottom: var(--spacing-2xl);
 }
 
 .insurance-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: var(--spacing-3xl);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.insurance-info {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.insurance-info h3 {
-  font-size: 24px;
-  color: #1f2937;
-  margin-bottom: 16px;
+.insurance-info h3,
+.coverage-check h3 {
+  margin-bottom: var(--spacing-md);
 }
 
 .insurance-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
   list-style: none;
-  padding: 0;
-  margin: 20px 0;
 }
 
 .insurance-list li {
-  padding: 8px 0;
-  padding-left: 24px;
   position: relative;
-  color: #4b5563;
+  padding-left: var(--spacing-md);
+  color: var(--text-secondary);
 }
 
 .insurance-list li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   left: 0;
-  color: #059669;
-  font-weight: 700;
+  top: 0.5em;
+  width: 4px;
+  height: 4px;
+  background: var(--secondary);
+  border-radius: var(--radius-full);
 }
 
 .insurance-note {
-  font-size: 14px;
-  color: #6b7280;
-  font-style: italic;
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin-top: var(--spacing-md);
 }
 
-.coverage-check {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.coverage-check h3 {
-  font-size: 24px;
-  color: #1f2937;
-  margin-bottom: 16px;
-}
-
+/* Coverage Form */
 .coverage-form {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
 }
 
 .coverage-form input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  font-size: 16px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.coverage-form input:focus {
+  outline: none;
+  border-color: var(--secondary);
 }
 
 .coverage-form button {
-  width: 100%;
-  background: #2563eb;
+  background: var(--primary);
   color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: all var(--transition-base);
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 .coverage-form button:hover {
-  background: #1e40af;
+  background: var(--primary-light);
+  transform: translateY(-1px);
 }
 
 .form-note {
-  margin-top: 16px;
-  font-size: 14px;
-  color: #6b7280;
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
   text-align: center;
 }
 
 /* Cash Pay Section */
 .cash-pay-section {
-  margin-bottom: 40px;
+  padding: var(--spacing-3xl) 0;
 }
 
 .cash-pay-section h2 {
-  font-size: 32px;
-  color: #1f2937;
-  margin-bottom: 30px;
   text-align: center;
+  margin-bottom: var(--spacing-2xl);
 }
 
 .cash-pay-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
 }
 
 .cash-pay-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-base);
+}
+
+.cash-pay-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .cash-pay-card h3 {
-  font-size: 24px;
-  color: #1f2937;
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
 }
 
 .cash-pay-card p {
-  color: #4b5563;
-  margin-bottom: 20px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
 }
 
 .cash-pay-card ul {
   list-style: none;
-  padding: 0;
-  text-align: left;
 }
 
 .cash-pay-card li {
-  padding: 8px 0;
-  padding-left: 24px;
   position: relative;
-  color: #6b7280;
+  padding-left: var(--spacing-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
 }
 
 .cash-pay-card li::before {
-  content: '•';
+  content: '';
   position: absolute;
-  left: 8px;
-  color: #2563eb;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: var(--radius-full);
 }
 
 /* Pricing FAQ */
 .pricing-faq {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
+  background: var(--background-secondary);
+  padding: var(--spacing-3xl);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-3xl);
 }
 
 .pricing-faq h2 {
-  font-size: 32px;
-  color: #1f2937;
-  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .faq-list details {
-  margin-bottom: 16px;
-  padding: 20px;
-  background: #f9fafb;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
+  background: var(--background);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
 }
 
 .faq-list summary {
-  font-weight: 600;
-  color: #1f2937;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: 500;
   cursor: pointer;
-  font-size: 18px;
+  transition: background-color var(--transition-fast);
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
 }
 
 .faq-list details[open] summary {
-  margin-bottom: 16px;
+  background: var(--background-secondary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.faq-list summary:hover {
+  background: var(--background-secondary);
 }
 
 .faq-list details p {
-  margin: 0;
-  color: #4b5563;
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 /* CTA Section */
-.cta-section {
-  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-  color: white;
-  padding: 60px;
-  border-radius: 12px;
+.pricing-page .cta-section {
   text-align: center;
+  padding: var(--spacing-3xl) 0;
 }
 
 .cta-section h2 {
-  font-size: 36px;
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-md);
 }
 
 .cta-section p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  opacity: 0.9;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.125rem;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 20px;
+  gap: var(--spacing-md);
   justify-content: center;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 16px 40px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  flex-wrap: wrap;
 }
 
 .cta-button.primary {
-  background: white;
-  color: #2563eb;
+  background: var(--primary);
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background: var(--primary-light);
+  color: white;
 }
 
 .cta-button.secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.cta-button.secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .insurance-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .insurance-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-table {
+    overflow-x: auto;
+    margin: 0 calc(-1 * var(--spacing-md));
+  }
+  
+  .pricing-table table {
+    min-width: 500px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
 } 
