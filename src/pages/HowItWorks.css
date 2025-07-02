@@ -6,66 +6,86 @@
 
 .page-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: var(--spacing-3xl);
 }
 
 .page-header h1 {
-  font-size: 48px;
-  color: #1f2937;
-  margin-bottom: 16px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
 }
 
 .page-header p {
-  font-size: 20px;
-  color: #6b7280;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
 }
 
-/* Steps Detailed */
+/* Steps Section */
 .steps-detailed {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-3xl);
   padding: 0 var(--spacing-lg);
 }
 
 .step-card {
-  background: var(--background);
-  padding: var(--spacing-xl);
+  background: white;
+  padding: var(--spacing-2xl);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
+  border: 2px solid transparent;
   transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--secondary);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
 }
 
 .step-card:hover {
   border-color: var(--secondary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.step-card:hover::before {
+  transform: scaleX(1);
 }
 
 .step-header {
   display: flex;
   align-items: center;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
 
 .step-number {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   background: var(--secondary);
   color: white;
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .step-card h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   color: var(--text-primary);
   margin: 0;
 }
@@ -88,8 +108,8 @@
   padding-left: var(--spacing-lg);
   margin-bottom: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 .step-details li:last-child {
@@ -97,14 +117,12 @@
 }
 
 .step-details li::before {
-  content: '';
+  content: '✓';
   position: absolute;
   left: 0;
-  top: 0.5em;
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  border-radius: var(--radius-full);
+  top: 0;
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* Process Flowchart */
@@ -204,23 +222,44 @@
 .how-it-works-page .cta-section {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   color: white;
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-3xl) var(--spacing-2xl);
   border-radius: var(--radius-lg);
   text-align: center;
   margin: 0 var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.how-it-works-page .cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.3; }
 }
 
 .how-it-works-page .cta-section h2 {
   font-size: 2rem;
+  font-weight: 700;
   margin-bottom: var(--spacing-md);
   color: white;
+  position: relative;
 }
 
 .how-it-works-page .cta-section p {
   font-size: 1.125rem;
   margin-bottom: var(--spacing-xl);
-  opacity: 0.9;
+  opacity: 0.95;
   color: white;
+  position: relative;
 }
 
 .how-it-works-page .cta-button {
@@ -233,27 +272,42 @@
   font-weight: 600;
   text-decoration: none;
   transition: all var(--transition-base);
+  position: relative;
+  z-index: 1;
 }
 
 .how-it-works-page .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .steps-detailed {
-    grid-template-columns: 1fr;
-    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
   }
   
-  .step-header {
-    flex-direction: column;
-    text-align: center;
+  .steps-detailed {
+    grid-template-columns: 1fr;
+    padding: 0 var(--spacing-md);
+  }
+  
+  .step-card {
+    padding: var(--spacing-xl);
   }
   
   .how-it-works-page .cta-section {
     padding: var(--spacing-2xl) var(--spacing-lg);
-    margin: 0;
+    margin: 0 var(--spacing-md);
+  }
+  
+  .how-it-works-page .cta-section h2 {
+    font-size: 1.5rem;
   }
 } 

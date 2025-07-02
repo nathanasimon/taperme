@@ -27,23 +27,23 @@ function About() {
   const values = [
     {
       icon: '🎯',
-      title: 'Precision',
-      description: 'Every dose matters. We believe in exact measurements for optimal outcomes.'
+      title: 'Patient-First',
+      description: 'Built by a patient, for patients. We understand your journey because we\'ve lived it.'
     },
     {
-      icon: '🤝',
-      title: 'Partnership',
-      description: 'Working hand-in-hand with providers and patients for successful tapering.'
+      icon: '⚡',
+      title: 'Convenience',
+      description: 'No more pharmacy runarounds. Get your medication delivered directly to your door.'
+    },
+    {
+      icon: '💰',
+      title: 'Accessibility',
+      description: 'Fair pricing and insurance advocacy. Quality tapering shouldn\'t break the bank.'
     },
     {
       icon: '🔬',
-      title: 'Innovation',
-      description: 'Leveraging compounding technology to solve medication discontinuation challenges.'
-    },
-    {
-      icon: '❤️',
-      title: 'Compassion',
-      description: 'Understanding the difficulty of tapering and supporting every step of the journey.'
+      title: 'Precision',
+      description: 'Exact dosing with liquid formulations. Because accuracy matters in tapering.'
     }
   ];
 
@@ -58,10 +58,11 @@ function About() {
         <div className="mission-section">
           <h2>Our Mission</h2>
           <p className="mission-statement">
-            TaperMe exists to eliminate the suffering caused by improper medication discontinuation. 
-            We believe everyone deserves access to precise, gradual tapering that respects the brain's 
-            need for slow adjustment. Through liquid compounding and expert support, we're making 
-            successful tapering possible for patients worldwide.
+            TaperMe exists to fix a broken system. Born from personal frustration with the 
+            inaccessibility of liquid formulations, we're building a patient-first solution that 
+            prioritizes quality, convenience, and affordability. We believe precise tapering shouldn't 
+            require multiple pharmacy visits, weeks of waiting, or premium prices. Our mission is 
+            simple: make safe, accurate medication tapering accessible to everyone who needs it.
           </p>
         </div>
 
@@ -69,21 +70,24 @@ function About() {
           <h2>Our Story</h2>
           <div className="story-content">
             <p>
-              TaperMe was founded in 2020 by a team of healthcare professionals who witnessed 
-              firsthand the challenges of medication discontinuation. Too many patients were 
-              suffering from withdrawal symptoms simply because they couldn't reduce their doses 
-              gradually enough with standard tablets.
+              When I first decided to taper off Lamotrigine, following the advice of specialists 
+              in the field, I tried to find liquid formulation. This is the stuff we give to babies: 
+              it is exact, and much more accurate than splitting pills. My psychiatrist wrote it out 
+              to my normal pharmacy - no stock available. This was shocking to me as lamotrigine is 
+              one of the most popular psychiatric drugs.
             </p>
             <p>
-              We partnered with leading compounding pharmacies to develop a solution: precision 
-              liquid formulations that allow for micro-tapering. What started as a small pilot 
-              program has grown into a nationwide service helping thousands of patients successfully 
-              discontinue their medications.
+              Nevertheless, onto a bigger, more well-stocked pharmacy farther away from me. No stock 
+              again. Finally, we realized we were going to have to get this custom-made by a 
+              compounding pharmacy. They said it would take a few days. Not only did the whole thing 
+              end up costing $84 dollars - insurance did not cover it at all. For less medication, 
+              I had to pay more.
             </p>
             <p>
-              Today, TaperMe works with over 500 healthcare providers across the country, offering 
-              liquid formulations for the most commonly prescribed psychiatric medications. Our 
-              commitment to quality, precision, and patient support continues to drive everything we do.
+              This is when I knew I had to build a way to do this better. TaperMe was born from this 
+              frustration - a patient-first provider focused on making things as high quality and 
+              convenient as possible. We believe that safe, precise tapering should be accessible to 
+              everyone, not just those who can navigate a complex system or afford premium prices.
             </p>
           </div>
         </div>
@@ -157,9 +161,9 @@ function About() {
         </div>
 
         <div className="cta-section">
-          <h2>Join Us in Transforming Tapering</h2>
-          <p>Whether you're a patient, provider, or pharmacy interested in partnering, we'd love to hear from you.</p>
-          <a href="/contact" className="cta-button">Get in Touch</a>
+          <h2>Ready to Taper the Right Way?</h2>
+          <p>Don't struggle with pill splitting or pharmacy runarounds. Join thousands who've discovered a better way to taper.</p>
+          <a href="/contact" className="cta-button">Start Your Journey</a>
         </div>
       </div>
     </div>

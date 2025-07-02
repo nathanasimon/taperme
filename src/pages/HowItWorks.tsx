@@ -4,44 +4,46 @@ function HowItWorks() {
   const steps = [
     {
       number: 1,
-      title: 'Select Your Medication',
-      description: 'Browse our full catalog of psychiatric medications. Each medication page includes detailed information about available concentrations, pricing, and why liquid tapering might benefit you.',
+      title: 'Get Your Prescription to Us',
+      description: 'Your provider can send a new prescription directly to TaperMe, or you can transfer your existing prescription from any pharmacy.',
       details: [
-        'Search by generic or brand name',
-        'Filter by medication class',
-        'Read about liquid tapering benefits for your specific medication'
+        'Provider sends prescription electronically to TaperMe',
+        'Or transfer from CVS, Walgreens, or any pharmacy',
+        'We handle all the paperwork',
+        'Insurance verification included'
       ]
     },
     {
       number: 2,
-      title: 'Pick Concentration & Quantity',
-      description: 'Work with your healthcare provider to determine the right concentration and bottle size for your tapering schedule.',
+      title: 'We Convert to Liquid',
+      description: 'Our pharmacists automatically convert your prescription to the appropriate liquid concentration for precise tapering.',
       details: [
-        'Multiple concentration options available',
-        'Bottle sizes from 30mL to 240mL',
-        'Custom concentrations available upon request'
+        'No guesswork - we know the right concentration',
+        'Same active ingredient, just in liquid form',
+        'Optimized for gradual dose reductions',
+        'All conversions reviewed by licensed pharmacists'
       ]
     },
     {
       number: 3,
-      title: 'We Prep & Ship to You',
-      description: 'Our partner pharmacies compound your medication to exact specifications and ship directly to your door.',
+      title: 'Fresh Compounding & Delivery',
+      description: 'Your medication is compounded fresh and shipped directly to your door with everything you need.',
       details: [
-        'Compounded fresh for each order',
-        'Quality tested for potency and stability',
-        'Shipped with temperature control when needed',
-        'Tracking provided for all shipments'
+        'Made-to-order for maximum potency',
+        'Includes precision oral syringes',
+        'Clear instructions and dosing guide',
+        'Shipped in 2-3 business days'
       ]
     },
     {
       number: 4,
-      title: 'Taper with Pre-Measured Syringe',
-      description: 'Use the included oral syringe to measure exact doses according to your tapering schedule.',
+      title: 'Taper at Your Own Pace',
+      description: 'Use the included syringe to measure exact doses. Adjust as slowly as you need - no more pill splitting.',
       details: [
-        'Precision oral syringe included',
-        'Clear measurement markings',
-        'Easy-to-follow dosing instructions',
-        'Support available for dosing questions'
+        'Reduce by as little as 0.1mL at a time',
+        'No more crushing or cutting pills',
+        'Stay on any dose as long as needed',
+        'Refill reminders and support included'
       ]
     }
   ];
@@ -51,7 +53,7 @@ function HowItWorks() {
       <div className="container">
         <div className="page-header">
           <h1>How It Works</h1>
-          <p>From prescription to precision tapering in four simple steps</p>
+          <p>As easy as your regular pharmacy, but designed for tapering</p>
         </div>
 
         <div className="steps-detailed">
@@ -72,9 +74,9 @@ function HowItWorks() {
         </div>
 
         <div className="cta-section">
-          <h2>Ready to Start Your Liquid Taper?</h2>
-          <p>Browse our medication catalog and find your prescription.</p>
-          <a href="/medications" className="cta-button">Browse Medications</a>
+          <h2>Ready to Start Tapering Properly?</h2>
+          <p>Transfer your prescription or have your provider send a new one. We'll handle the rest.</p>
+          <a href="/contact" className="cta-button">Get Started</a>
         </div>
       </div>
     </div>

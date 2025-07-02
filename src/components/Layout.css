@@ -19,21 +19,24 @@
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 72px;
+  gap: var(--spacing-2xl);
+  position: relative;
 }
 
 /* Logo */
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--primary);
   letter-spacing: -0.02em;
   transition: opacity var(--transition-fast);
+  margin-right: var(--spacing-xl);
 }
 
 .logo:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   color: var(--primary);
 }
 
@@ -41,7 +44,7 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
 }
 
 .nav a {
@@ -49,24 +52,28 @@
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: color var(--transition-fast);
-  padding: var(--spacing-xs) 0;
+  transition: all var(--transition-fast);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  white-space: nowrap;
+  border-radius: var(--radius-md);
 }
 
 .nav a:hover {
-  color: var(--primary);
+  color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .nav a.active {
   color: var(--primary);
+  font-weight: 600;
 }
 
 .nav a.active::after {
   content: '';
   position: absolute;
   bottom: -2px;
-  left: 0;
-  right: 0;
+  left: var(--spacing-sm);
+  right: var(--spacing-sm);
   height: 2px;
   background-color: var(--primary);
   border-radius: var(--radius-full);
@@ -176,8 +183,8 @@
 }
 
 .floating-provider-cta:hover {
-  background: var(--secondary-hover);
-  transform: translateX(-4px);
+  background: #1d4ed8;
+  transform: translateX(-2px);
   color: white;
 }
 
@@ -187,9 +194,34 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .header .container {
+    gap: var(--spacing-lg);
+  }
+  
+  .logo {
+    margin-right: var(--spacing-md);
+  }
+  
+  .nav {
+    gap: var(--spacing-md);
+  }
+  
+  .nav a {
+    font-size: 0.9rem;
+    padding: var(--spacing-xs) var(--spacing-xs);
+  }
+}
+
 @media (max-width: 768px) {
   .header .container {
     height: 64px;
+    justify-content: space-between;
+    gap: 0;
+  }
+  
+  .logo {
+    margin-right: 0;
   }
   
   .nav {

@@ -42,8 +42,8 @@ function Home() {
             All your psychiatric meds, pre-measured in liquid form, shipped direct.
           </p>
           <div className="hero-actions">
-            <Link to="/medications" className="cta-button">
-              Browse Medications
+            <Link to="/onboarding" className="cta-button">
+              Get Started
             </Link>
             <Link to="/how-it-works" className="button-outline">
               Learn How It Works
