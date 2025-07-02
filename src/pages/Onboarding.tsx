@@ -6,7 +6,10 @@ type OnboardingStep = 'welcome' | 'insurance' | 'prescriptions' | 'account';
 
 function Onboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>('welcome');
+  // These state values are collected for future use in the onboarding flow
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [hasInsurance, setHasInsurance] = useState<boolean | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [prescriptionType, setPrescriptionType] = useState<'existing' | 'new' | null>(null);
   const navigate = useNavigate();
 
