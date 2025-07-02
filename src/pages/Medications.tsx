@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { medications, medicationsByClass } from '../data/medications';
+import { medicationsByClass } from '../data/medications';
 import type { MedicationClass } from '../data/medications';
 import './Medications.css';
 

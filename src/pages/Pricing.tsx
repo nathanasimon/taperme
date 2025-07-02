@@ -1,4 +1,3 @@
-import { medications } from '../data/medications';
 import './Pricing.css';
 
 function Pricing() {
