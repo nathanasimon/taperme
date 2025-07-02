@@ -13,6 +13,13 @@ function Onboarding() {
   const [prescriptionType, setPrescriptionType] = useState<'existing' | 'new' | null>(null);
   const navigate = useNavigate();
 
+  // Collect onboarding data for future API submission
+  const getOnboardingData = () => ({
+    hasInsurance,
+    prescriptionType,
+    step: currentStep
+  });
+
   const renderStepIndicator = () => {
     const steps = ['welcome', 'insurance', 'prescriptions', 'account'];
     const currentIndex = steps.indexOf(currentStep);
@@ -188,7 +195,10 @@ function Onboarding() {
       
       <form className="account-form" onSubmit={(e) => {
         e.preventDefault();
-        // Handle form submission
+        // Handle form submission with collected onboarding data
+        const onboardingData = getOnboardingData();
+        console.log('Onboarding completed with data:', onboardingData);
+        // TODO: Submit onboardingData to API
         navigate('/medications');
       }}>
         <div className="form-group">
