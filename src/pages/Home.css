@@ -1,0 +1,336 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #2563eb;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Liquid Section */
+.why-liquid {
+  padding: 80px 0;
+  background: white;
+}
+
+.why-liquid h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #1f2937;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 40px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.benefit-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Medication Categories */
+.medication-categories {
+  padding: 80px 0;
+  background: #f9fafb;
+}
+
+.medication-categories h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #1f2937;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.category-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.category-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.category-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.category-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.category-card p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.medication-count {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* How It Works Teaser */
+.how-it-works-teaser {
+  padding: 80px 0;
+  background: white;
+}
+
+.how-it-works-teaser h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #1f2937;
+}
+
+.steps-preview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.step {
+  text-align: center;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.step h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.step p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.learn-more {
+  display: block;
+  text-align: center;
+  color: #2563eb;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.learn-more:hover {
+  color: #1e40af;
+}
+
+/* Providers Teaser */
+.providers-teaser {
+  padding: 80px 0;
+  background: #f9fafb;
+}
+
+.providers-teaser h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #1f2937;
+}
+
+.provider-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.provider-logo-item {
+  text-align: center;
+}
+
+.provider-logo-placeholder {
+  width: 120px;
+  height: 120px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #6b7280;
+  margin: 0 auto 16px;
+}
+
+.provider-logo-item span {
+  display: block;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.see-all-providers {
+  display: block;
+  text-align: center;
+  color: #2563eb;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.see-all-providers:hover {
+  color: #1e40af;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 80px 0;
+  background: white;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #1f2937;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.testimonial-card {
+  background: #f9fafb;
+  padding: 40px;
+  border-radius: 12px;
+  border-left: 4px solid #2563eb;
+}
+
+.testimonial-card blockquote {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.testimonial-author strong {
+  display: block;
+  color: #1f2937;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.testimonial-author span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.cta-section .cta-button {
+  background: white;
+  color: #2563eb;
+} 

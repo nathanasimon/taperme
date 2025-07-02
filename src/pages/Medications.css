@@ -1,0 +1,144 @@
+.medications-page {
+  padding: 60px 0;
+  min-height: calc(100vh - 200px);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.page-header p {
+  font-size: 20px;
+  color: #6b7280;
+}
+
+/* Medications Table */
+.medications-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.medications-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.medications-table th {
+  background: #f3f4f6;
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.medications-table td {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+.medications-table tr:last-child td {
+  border-bottom: none;
+}
+
+.medications-table tr.highlighted {
+  background: #fef3c7;
+}
+
+.class-cell {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #1f2937;
+  border-right: 2px solid #e5e7eb;
+}
+
+.class-name {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  text-align: center;
+}
+
+.generic-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.brand-names {
+  color: #6b7280;
+}
+
+.details-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.details-link:hover {
+  color: #1e40af;
+}
+
+/* Medications Info */
+.medications-info {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.medications-info h2 {
+  font-size: 32px;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.medications-info p {
+  font-size: 18px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.medications-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.medications-info li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 12px;
+  color: #4b5563;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.medications-info li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #059669;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.prescription-notice {
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  padding: 16px 20px;
+  color: #92400e;
+  font-size: 16px;
+} 

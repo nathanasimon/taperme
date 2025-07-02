@@ -1,0 +1,147 @@
+.faq-page {
+  padding: 60px 0;
+}
+
+/* FAQ Content */
+.faq-content {
+  margin-bottom: 60px;
+}
+
+.faq-section {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.faq-section h2 {
+  font-size: 28px;
+  color: #1f2937;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  cursor: pointer;
+  font-size: 18px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 400;
+  color: #6b7280;
+  transition: transform 0.2s;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+}
+
+.faq-item[open] summary {
+  background: #f3f4f6;
+}
+
+.answer {
+  padding: 0 20px 20px;
+  background: white;
+}
+
+.answer p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Contact CTA */
+.contact-cta {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  padding: 60px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.contact-cta h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.contact-cta > p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-option {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.contact-option h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.contact-option p {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.response-time {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.contact-button {
+  display: inline-block;
+  background: white;
+  color: #2563eb;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+} 
